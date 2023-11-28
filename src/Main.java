@@ -9,7 +9,7 @@ public class Main {
         Tableware plates = new Tableware("Тарелки");
         Tableware pans = new Tableware("Сковородки");
         Duchess duchess = new Duchess("Герцогиня");
-        Child child = new Child("Ребёночек");
+        Child child = new Child("Ребёночек", Genders.MALE);
         Girl girl = new Girl("Алиса");
 
         poker.fly();

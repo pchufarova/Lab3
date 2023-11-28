@@ -6,7 +6,7 @@ public class Girl extends Human {
 
         super();
         super.name = name;
-        super.gender = "female";
+        super.gender = Genders.FEMALE.getGender();
 
     }
 
