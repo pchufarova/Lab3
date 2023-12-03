@@ -17,7 +17,8 @@ public class Main {
         for (Things thing: arrayOfThings) {
 
             thing.fly();
-            thing.bump(duchess, child, girl);
+            thing.bump(duchess, child);
+            girl.see();
 
         }
 

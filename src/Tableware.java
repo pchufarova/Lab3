@@ -31,11 +31,12 @@ public class Tableware extends Things {
                 System.out.println(name + " врезаются в " + human.getName());
                 human.react();
 
-            } else System.out.println(name + " не попадают в " + human.getName());
+            } else {
+                System.out.println(name + " не попадают в " + human.getName());
+                System.out.println(human.getName() + " всё равно " + human.getReaction().getCondition());
+            }
 
         }
-
-        System.out.println("\n");
 
     }
 

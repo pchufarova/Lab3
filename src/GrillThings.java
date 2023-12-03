@@ -30,10 +30,12 @@ public class GrillThings extends Things implements Bumpable {
                 System.out.println(name + " врезается в " + human.getName());
                 human.react();
 
-            } else System.out.println(name + " не попадает в " + human.getName());
-        }
+            } else {
+                System.out.println(name + " не попадает в " + human.getName());
+                System.out.println(human.getName() + " всё равно " + human.getReaction().getCondition());
 
-        System.out.println("\n");
+            }
+        }
 
     }
 

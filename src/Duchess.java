@@ -7,6 +7,7 @@ public class Duchess extends Human {
         super();
         super.name = name;
         super.gender = Genders.FEMALE;
+        super.reaction = Reactions.IGNORE;
 
     }
 
@@ -14,7 +15,7 @@ public class Duchess extends Human {
     @Override
     public void react() {
 
-        System.out.println(name + " " + Reactions.IGNORE.getCondition());
+        System.out.println(name + " " + reaction.getCondition());
 
     }
 

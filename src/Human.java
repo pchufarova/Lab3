@@ -4,11 +4,17 @@ public abstract class Human {
 
     protected Genders gender;
     protected String name;
+    protected Reactions reaction;
 
     public Human() {}
 
     public abstract void react();
 
+    public Reactions getReaction() {
+
+        return reaction;
+
+    }
 
     public String getName() {
 
