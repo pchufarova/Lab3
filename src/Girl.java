@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Girl extends Human implements Seeable {
+public class Girl extends Human {
 
     public Girl(String name) {
 
@@ -12,17 +12,10 @@ public class Girl extends Human implements Seeable {
     }
 
     @Override
-    public void see() {
+    public void react() {
 
         System.out.println(name + ", увидев это, " + reaction.getCondition());
         System.out.print("\n");
-
-    }
-
-    @Override
-    public void react() {
-
-        System.out.println(name + " " + reaction.getCondition());
 
     }
 

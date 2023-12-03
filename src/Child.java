@@ -14,7 +14,7 @@ public class Child extends Human {
     @Override
     public void react() {
 
-        System.out.println(name + " " + reaction.getCondition());
+        System.out.println("А " + name + " и без того " + reaction.getCondition());
 
     }
 

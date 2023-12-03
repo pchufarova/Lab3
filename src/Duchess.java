@@ -15,7 +15,7 @@ public class Duchess extends Human {
     @Override
     public void react() {
 
-        System.out.println(name + " " + reaction.getCondition());
+        System.out.println("Правда " + name + ", кажется,  " + reaction.getCondition());
 
     }
 

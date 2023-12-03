@@ -18,7 +18,7 @@ public class Main {
 
             thing.fly();
             thing.bump(duchess, child);
-            girl.see();
+            girl.react();
 
         }
 
