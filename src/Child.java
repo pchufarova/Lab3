@@ -6,7 +6,7 @@ public class Child extends Human {
 
         super();
         super.name = name;
-        super.gender = gender.getGender();
+        super.gender = gender;
 
     }
 

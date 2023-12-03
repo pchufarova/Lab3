@@ -6,7 +6,7 @@ public class Duchess extends Human {
 
         super();
         super.name = name;
-        super.gender = Genders.FEMALE.getGender();
+        super.gender = Genders.FEMALE;
 
     }
 

@@ -1,6 +1,6 @@
 public abstract class Human {
 
-    protected String gender;
+    protected Genders gender;
     protected String name;
 
     public Human() {}
@@ -14,7 +14,7 @@ public abstract class Human {
 
     }
 
-    public String getGender() {
+    public Genders getGender() {
 
         return gender;
 
