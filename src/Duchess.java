@@ -18,27 +18,4 @@ public class Duchess extends Human {
 
     }
 
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(name, gender);
-
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        Duchess duchess = (Duchess) obj;
-        return Objects.equals(name, duchess.name);
-
-    }
-
-    @Override
-    public String toString() {
-
-        return "Герцогиня " + name;
-
-    }
 }

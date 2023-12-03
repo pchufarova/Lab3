@@ -1,22 +1,20 @@
 import java.util.Objects;
 
-public class GrillThings implements Flyable, Bumpable {
-
-
-    protected String name;
+public class GrillThings extends Things implements Bumpable {
 
     public GrillThings(String name) {
 
+        super();
         this.name = name;
 
     }
 
+    @Override
+    public boolean is_thing_bumped() {
 
-    public String getName() {
-
-        return name;
-
+        return (20 * Math.random() + name.length() > 12);
     }
+
     @Override
     public void fly() {
 
@@ -26,39 +24,16 @@ public class GrillThings implements Flyable, Bumpable {
 
     @Override
     public void bump(Human... humans) {
-        for (int i = 0; i < humans.length; i++) {
+        for (Human human : humans) {
 
-            System.out.println(name + " врезается в " + humans[i].getName());
-            humans[i].react();
+            if (is_thing_bumped()) {
+                System.out.println(name + " врезается в " + human.getName());
+                human.react();
 
-
+            } else System.out.println(name + " не попадает в " + human.getName());
         }
 
         System.out.println("\n");
-
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(name);
-
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        GrillThings gt = (GrillThings) obj;
-        return Objects.equals(name, gt.name);
-
-    }
-
-    @Override
-    public String toString() {
-
-        return "Инструмент " + name;
 
     }
 

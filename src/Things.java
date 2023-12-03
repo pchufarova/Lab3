@@ -1,14 +1,12 @@
 import java.util.Objects;
 
-public abstract class Human {
+public abstract class Things implements Flyable, Bumpable {
 
-    protected Genders gender;
     protected String name;
 
-    public Human() {}
+    public Things() {}
 
-    public abstract void react();
-
+    public abstract boolean is_thing_bumped();
 
     public String getName() {
 
@@ -16,16 +14,10 @@ public abstract class Human {
 
     }
 
-    public Genders getGender() {
-
-        return gender;
-
-    }
-
     @Override
     public int hashCode() {
 
-        return Objects.hash(name, gender);
+        return Objects.hash(name);
 
     }
 
@@ -34,15 +26,15 @@ public abstract class Human {
 
         if (obj == this) return true;
         if (obj == null || obj.getClass() != this.getClass()) return false;
-        Human human = (Human) obj;
-        return (Objects.equals(name, human.name) && Objects.equals(gender, human.gender));
+        Things things = (Things) obj;
+        return Objects.equals(name, things.name);
 
     }
 
     @Override
     public String toString() {
 
-        return "Human_ " + name;
+        return "Things_ " + name;
 
     }
 

@@ -4,7 +4,7 @@ public class Main {
 
         GrillThings poker = new GrillThings("Кочерга");
         GrillThings scoop = new GrillThings("Совок");
-        GrillThings tongs = new Tongs("Щипцы для угля");
+        Tableware tongs = new Tableware("Щипцы для угля");
         Tableware cups = new Tableware("Чашки");
         Tableware plates = new Tableware("Тарелки");
         Tableware pans = new Tableware("Сковородки");
@@ -12,18 +12,14 @@ public class Main {
         Child child = new Child("Ребёночек", Genders.MALE);
         Girl girl = new Girl("Алиса");
 
-        poker.fly();
-        poker.bump(duchess, child, girl);
-        scoop.fly();
-        scoop.bump(duchess, child, girl);
-        tongs.fly();
-        tongs.bump(duchess, child, girl);
-        pans.fall();
-        pans.bump(duchess, child, girl);
-        plates.fall();
-        plates.bump(duchess, child, girl);
-        cups.fall();
-        cups.bump(duchess, child, girl);
+        Things[] arrayOfThings = new Things[] {poker, scoop, tongs, pans, plates, cups};
+
+        for (Things thing: arrayOfThings) {
+
+            thing.fly();
+            thing.bump(duchess, child, girl);
+
+        }
 
     }
 
