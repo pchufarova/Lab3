@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class GrillThings extends Things implements Bumpable {
+public class GrillThings extends Things {
 
     public GrillThings(String name) {
 
