@@ -32,7 +32,7 @@ public abstract class Human {
     @Override
     public int hashCode() {
 
-        return Objects.hash(name, gender);
+        return Objects.hash(name, gender, condition);
 
     }
 
