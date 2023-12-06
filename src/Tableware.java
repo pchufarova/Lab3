@@ -11,7 +11,7 @@ public class Tableware extends Things {
     }
 
     @Override
-    public boolean is_thing_bumped() {
+    protected boolean is_thing_bumped() {
 
         return ((name.length() + COEFFICIENT) * Math.random() > LIMIT);
     }

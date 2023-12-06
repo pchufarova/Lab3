@@ -7,7 +7,7 @@ public abstract class Things implements Flyable, Bumpable {
 
     public Things() {}
 
-    public abstract boolean is_thing_bumped();
+    protected abstract boolean is_thing_bumped();
 
     public String getName() {
 

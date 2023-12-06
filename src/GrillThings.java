@@ -12,7 +12,7 @@ public class GrillThings extends Things {
     }
 
     @Override
-    public boolean is_thing_bumped() {
+    protected boolean is_thing_bumped() {
 
         return (COEFFICIENT * Math.random() + name.length() > LIMIT);
     }
