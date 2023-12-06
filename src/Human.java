@@ -23,6 +23,12 @@ public abstract class Human {
 
     }
 
+    public Reactions getCondition() {
+
+        return condition;
+
+    }
+
     @Override
     public int hashCode() {
 
