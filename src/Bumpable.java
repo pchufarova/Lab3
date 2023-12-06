@@ -1,5 +1,5 @@
 public interface Bumpable {
 
-    public void bump(Human... humans);
+    public void bump(Human human);
 
 }

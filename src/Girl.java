@@ -7,15 +7,21 @@ public class Girl extends Human {
         super();
         super.name = name;
         super.gender = Genders.FEMALE;
-        super.reaction = Reactions.FEAR;
 
     }
 
     @Override
-    public void react() {
+    public void react(boolean isBumped) {
 
-        System.out.println(name + ", увидев это, " + reaction.getCondition());
-        System.out.print("\n");
+        if (isBumped) {
+            super.condition = Reactions.FEAR;
+        } else {
+
+            super.condition = Reactions.CALM;
+
+        }
+
+        System.out.println("Состояние " + name + ": " + condition.getCondition());
 
     }
 

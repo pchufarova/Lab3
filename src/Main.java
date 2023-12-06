@@ -16,9 +16,8 @@ public class Main {
 
         for (Things thing: arrayOfThings) {
 
-            thing.fly();
-            thing.bump(duchess, child);
-            girl.react();
+            thing.flyInto(duchess, child, girl);
+            System.out.print("\n");
 
         }
 

@@ -2,6 +2,8 @@ import java.util.Objects;
 
 public class GrillThings extends Things {
 
+    private static final int COEFFICIENT = 20;
+
     public GrillThings(String name) {
 
         super();
@@ -12,31 +14,6 @@ public class GrillThings extends Things {
     @Override
     public boolean is_thing_bumped() {
 
-        return (20 * Math.random() + name.length() > 12);
+        return (COEFFICIENT * Math.random() + name.length() > LIMIT);
     }
-
-    @Override
-    public void fly() {
-
-        System.out.println(name + " летит");
-
-    }
-
-    @Override
-    public void bump(Human... humans) {
-        for (Human human : humans) {
-
-            if (is_thing_bumped()) {
-                System.out.println(name + " врезается в " + human.getName());
-                human.react();
-
-            } else {
-                System.out.println(name + " не попадает в " + human.getName());
-                System.out.println(human.getName() + " всё равно " + human.getReaction().getCondition());
-
-            }
-        }
-
-    }
-
 }

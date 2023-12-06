@@ -7,15 +7,24 @@ public class Duchess extends Human {
         super();
         super.name = name;
         super.gender = Genders.FEMALE;
-        super.reaction = Reactions.IGNORE;
 
     }
 
-
     @Override
-    public void react() {
+    public void react(boolean isBumped) {
 
-        System.out.println("Правда " + name + ", кажется,  " + reaction.getCondition());
+        if (isBumped) {
+
+            super.condition = Reactions.IGNORE;
+
+        } else {
+
+            super.condition = Reactions.CALM;
+
+        }
+
+        System.out.println("Состояние " + name + ": "+ condition.getCondition());
+
 
     }
 

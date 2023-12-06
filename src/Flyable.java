@@ -1,5 +1,5 @@
 public interface Flyable {
 
-    public void fly();
+    public void flyInto(Human... humans);
 
 }

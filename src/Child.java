@@ -7,14 +7,14 @@ public class Child extends Human {
         super();
         super.name = name;
         super.gender = gender;
-        super.reaction = Reactions.CRY;
 
     }
 
     @Override
-    public void react() {
+    public void react(boolean isBumped) {
 
-        System.out.println("А " + name + " и без того " + reaction.getCondition());
+        super.condition = Reactions.CRY;
+        System.out.println("Состояние " + name + ": " + condition.getCondition());
 
     }
 

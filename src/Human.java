@@ -4,17 +4,12 @@ public abstract class Human {
 
     protected Genders gender;
     protected String name;
-    protected Reactions reaction;
+    protected Reactions condition = Reactions.CALM;
 
     public Human() {}
 
-    public abstract void react();
+    public abstract void react(boolean isBumped);
 
-    public Reactions getReaction() {
-
-        return reaction;
-
-    }
 
     public String getName() {
 
