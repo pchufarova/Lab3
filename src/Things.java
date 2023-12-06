@@ -4,8 +4,7 @@ public abstract class Things implements Flyable, Bumpable {
 
     protected String name;
     protected static final int LIMIT = 12;
-
-    public Things() {}
+    protected static int coefficient;
 
     protected abstract boolean is_thing_bumped();
 
@@ -45,7 +44,7 @@ public abstract class Things implements Flyable, Bumpable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(name);
+        return Objects.hash(name, LIMIT, coefficient);
 
     }
 
